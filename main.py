@@ -5,32 +5,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import ensemble
 import streamlit as st
 
-df1 = pd.read_csv("atp-2022.txt")
-df2 = pd.read_csv("atp_2021.txt")
-df3 = pd.read_csv("atp_2020.txt")
-df4 = pd.read_csv("atp_2019.txt")
-df5 = pd.read_csv("atp_2018.txt")
-df6 = pd.read_csv("atp_2017.txt")
-df7 = pd.read_csv("atp_2016.txt")
-df8 = pd.read_csv("atp_2015.txt")
-df9 = pd.read_csv("atp_2014.txt")
-df10 = pd.read_csv("atp_2013.txt")
-df11 = pd.read_csv("atp_2012.txt")
-df12 = pd.read_csv("atp_2011.txt")
-df13 = pd.read_csv("atp_2010.txt")
 
-union = pd.concat([df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12, df13], axis=0)
-
-new_df = union[['tourney_date', 'tourney_name', 'surface', 'round', 'tourney_level', 'winner_hand', 'loser_hand',
-                'winner_rank', 'loser_rank', 'winner_ht', 'loser_ht', 'winner_age', 'loser_age', 'winner_name',
-                'loser_name']]
-
-new_df = new_df.sort_values('tourney_date', axis=0)
-
-new_df.reset_index(drop=True, inplace=True)
-df = new_df
-df['winner_age'] = round(df['winner_age'])
-df['loser_age'] = round(df['loser_age'])
+df = pd.read_csv("out.csv")
 
 col1, col2, col3 = st.columns(3)
 
