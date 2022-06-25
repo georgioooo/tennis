@@ -8,7 +8,7 @@ import streamlit as st
 
 df = pd.read_csv("out.csv")
 
-st.title('Tennis winner predection')
+st.markdown("<h1 style='text-align: left ; color: purple;'>Tennis winner prediction</h1>", unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns(3)
 
