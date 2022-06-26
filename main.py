@@ -716,7 +716,7 @@ with col2:
                                                           'Zdenek Kolar', 'Tim Van Rijthoven', 'Ryan Peniston']))
 
 with col3:
-    tournament = st.selectbox('tourney name', sorted(['Brisbane', 'Doha', 'Chennai', 'Sydney', 'Auckland',
+    tournament = st.selectbox('tournament name', sorted(['Brisbane', 'Doha', 'Chennai', 'Sydney', 'Auckland',
                                                       'Australian Open', 'Santiago', 'Zagreb', 'Johannesburg',
                                                       'Rotterdam', 'San Jose',
                                                       'Costa Do Sauipe', 'Marseille', 'Memphis', 'Buenos Aires',
