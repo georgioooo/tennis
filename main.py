@@ -881,7 +881,7 @@ KNN = neighbors.KNeighborsClassifier(n_neighbors=3, metric='minkowski', weights=
 Decision_tree = DecisionTreeClassifier(criterion='entropy', max_depth=20)
 Random_forest = ensemble.RandomForestClassifier(criterion='entropy', max_depth=30, n_estimators=80)
 
-classifier = st.selectbox('Choisir un classifier', ['KNN', 'Decision_tree', 'Random_forest'])
+classifier = st.selectbox('Choisir un classifier', ['Nothing', 'KNN', 'Decision_tree', 'Random_forest'])
 
 if classifier == 'KNN':
     a = model(row=len(df) - 1, status='winner_name', needed_data=30, classifier=KNN)
